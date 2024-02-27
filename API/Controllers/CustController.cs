@@ -46,7 +46,7 @@ namespace API.Controllers
             //return data.Count() == 0 ? NotFound("Cust ID Not Found") : Ok(json);
             return Ok(json);
         }
-
+        /*
         [EnableCors("Policy")]
         [HttpGet("GetCustPhoneByStatus")]
         public object GetCustPhoneByStatus(bool status)
@@ -60,7 +60,7 @@ namespace API.Controllers
             );
             return data.Count() == 0 ? NotFound("Status Not Found") : Ok(json);
         }
-
+        */
         [EnableCors("Policy")]
         [HttpPost("AddPhone")]
         public async Task<object> AddPhone([FromBody] CustPhone custPhone)
@@ -98,7 +98,7 @@ namespace API.Controllers
                 return StatusCode(500);
             }
         }
-
+        /*
         [EnableCors("Policy")]
         [HttpPut("UpdatePhoneStatus")]
         public object UpdatePhoneStatus(CustPhone custPhone)
@@ -116,7 +116,7 @@ namespace API.Controllers
                 return StatusCode(500);
             }
         }
-
+        */
         [EnableCors("Policy")]
         [HttpPut("TogglePhoneStatus")]
         public object TogglePhoneStatus(CustPhone custPhone)
