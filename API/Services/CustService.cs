@@ -14,7 +14,7 @@ namespace API.Services
 
         public IEnumerable<CustPhone> GetCustPhoneByCustId(string custId)
         {
-            return _cust.GetAll().Where(x => x.CustId == custId).ToList();
+            return _cust.GetAll().Where(x => x.CustId.Contains(custId)).ToList();
         }
 
         public IEnumerable<CustPhone> GetAllCustPhone()
